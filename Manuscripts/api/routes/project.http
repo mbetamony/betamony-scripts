@@ -1,0 +1,27 @@
+# @name=CreateProject
+POST http://{{host}}/api/v2/project
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{"title": "{{projectTitle}}"}
+
+> {% client.global.set("projectId", response.body._id); %}
+
+###
+# @name=AddUser
+POST http://{{host}}/api/v2/project/{{projectId}}/users
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{ "userID": "{{connectId}}", "role": "{{role}}" }
+
+###
+# @name=RevokeUser
+DELETE http://{{host}}/api/v2/project/{{projectId}}/users
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{ "userID": "{{connectId}}" }

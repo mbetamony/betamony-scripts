@@ -1,0 +1,12 @@
+@connectId = betamony-connect-id-1
+# @name=Token
+POST http://{{host}}/api/v2/auth/token/{{connectId}}
+manuscripts-app-secret: {{secret}}
+Accept: application/json
+Content-Type: application/json
+
+{
+"deviceId": "{{deviceId}}"
+}
+
+> {% client.global.set("token", response.body.token); %}

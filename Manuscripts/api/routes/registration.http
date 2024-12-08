@@ -1,0 +1,14 @@
+# @name=ConnectSignup
+@email = mbetamony-test-1@atypon.com
+@name = Mohammad Betamony
+@connectId = betamony-connect-id-1
+POST http://{{host}}/api/v2/registration/connect/signup
+manuscripts-app-secret: {{secret}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "name": "{{name}}",
+  "connectUserID": "{{connectId}}"
+}
