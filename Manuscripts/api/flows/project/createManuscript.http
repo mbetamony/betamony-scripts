@@ -1,0 +1,14 @@
+import ../../routes/registration.http
+import ../../routes/authentication.http
+import ../../routes/project.http
+
+
+
+run #ConnectSignup(@connectId=user-1-connect-id, @email=user-1@test.com, @name=User One)
+###
+run #Token(@connectId=user-1-connect-id)
+###
+run #CreateProject(@projectTitle=Test Project1)
+###
+run #CreateManuscript()
+###

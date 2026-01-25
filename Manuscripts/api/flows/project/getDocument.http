@@ -1,0 +1,6 @@
+import ./createManuscript.http
+import ../../routes/document.http
+
+run createManuscript.http
+###
+run #GetDocument()

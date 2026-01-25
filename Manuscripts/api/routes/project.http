@@ -25,3 +25,25 @@ Accept: application/json
 Content-Type: application/json
 
 { "userID": "{{connectId}}" }
+###
+
+# @name=CreateManuscript
+POST http://{{host}}/api/v2/project/{{projectId}}/manuscript
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{"templateID":  "MPManuscriptTemplate:www-zotero-org-styles-nature-genetics-Nature-Genetics-Journal-Publication"}
+
+> {% client.global.set("manuscriptId", response.body._id); %}
+
+###
+#@name=UpdateDOI
+PUT http://{{host}}/api/v2/project/{{projectId}}/manuscript/{{manuscriptId}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxlYW53b3JrZmxvd0BhdHlwb24uY29tIiwidXNlcklEIjoiVXNlcl9lYjJjNTUwYS04MTA1LTRkOGEtOTJmYy1iMjU1NjVlZmY1NjEiLCJkZXZpY2VJRCI6IkxlYW5Xb3JrZmxvd0NsaWVudCIsImF1ZCI6Imh0dHA6Ly8wLjAuMC4wOjgwODAiLCJpc3MiOiIxMjcuMC4wLjEiLCJpYXQiOjE3NDIwNzMzMzF9.jhyUPIE4vVFjCxWTAdViMaPGXNXQzdEhy-iH39Ei9O0
+Accept: application/json
+Content-Type: application/json
+
+{"doi": "234"}
+
+

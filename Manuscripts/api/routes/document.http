@@ -1,0 +1,10 @@
+# @name=GetDocument
+GET http://{{host}}/api/v2/doc/{{projectId}}/manuscript/{{manuscriptId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+
+###
+@doi =123
+

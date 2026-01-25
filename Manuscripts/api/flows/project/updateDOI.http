@@ -1,0 +1,19 @@
+
+import ../../routes/registration.http
+import ../../routes/authentication.http
+import ../../routes/project.http
+
+
+
+run #ConnectSignup(@connectId=user-1-connect-id, @email=user-1@test.com, @name=User One)
+###
+run #Token(@connectId=user-1-connect-id)
+###
+run #CreateProject(@projectTitle=Test Project1)
+###
+run #CreateManuscript()
+###
+run #UpdateDOI(@doi=10.1234/5678)
+
+###
+run #UpdateDOI(@projectId=MPProject:d514c9c7-cfbc-40e6-b1b8-a6494f6d7df7, @manuscriptId=MPManuscript:b9b89873-7014-4cba-b45a-d6437e6551f0)

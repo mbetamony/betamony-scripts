@@ -1,0 +1,18 @@
+{
+  "name": "stress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "harvest-steps.js",
+  "scripts": {
+    "stress": "export $(cat .env | xargs) && k6 run stress.js 2> stress.log",
+    "harvest": "node harvest-steps.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "playwright": "^1.57.0"
+  }
+}

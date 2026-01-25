@@ -1,0 +1,54 @@
+[
+  {
+    "steps": [
+      {
+        "stepType": "replace",
+        "from": 6,
+        "to": 6,
+        "slice": {
+          "content": [
+            {
+              "type": "text",
+              "text": "1"
+            }
+          ]
+        }
+      },
+      {
+        "stepType": "replace",
+        "from": 7,
+        "to": 7,
+        "slice": {
+          "content": [
+            {
+              "type": "text",
+              "text": "2"
+            }
+          ]
+        }
+      },
+      {
+        "stepType": "replace",
+        "from": 8,
+        "to": 8,
+        "slice": {
+          "content": [
+            {
+              "type": "text",
+              "text": "3"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "steps": [
+      {
+        "stepType": "replace",
+        "from": 6,
+        "to": 9
+      }
+    ]
+  }
+]
