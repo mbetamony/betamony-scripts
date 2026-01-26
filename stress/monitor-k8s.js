@@ -73,7 +73,7 @@ const monitorNodes = async () => {
     const parts = line.trim().split(/\s+/);
     if (parts.length >= 5) {
       const name = parts[0];
-      if (name.includes("dev") || name.includes("default")) {
+      if (name.includes("dev")){
         const cpuPercent = parts[2];
         const memPercent = parts[4];
         entries.push(`${now()},${name},${cpuPercent},${memPercent}`);
