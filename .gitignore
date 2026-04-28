@@ -1,2 +1,23 @@
 /.idea/
 /.vscode/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.local.env
+
+# IntelliJ HTTP Client — local overrides (secrets, prod hosts)
+**/http-client.private.env.json
+
+# Dependencies
+node_modules/
+
+# Logs and OS noise
+*.log
+.DS_Store
+
+# Stress test output
+stress/results_*/
+stress/stress_test_results/
+stress/stress.log

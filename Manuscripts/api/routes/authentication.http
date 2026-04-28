@@ -1,3 +1,4 @@
+# Host, secret, deviceId: http-client.env.json + gitignored http-client.private.env.json — see README.md in this folder.
 @connectId = betamony-connect-id-1
 # @name=Token
 POST http://{{host}}/api/v2/auth/token/{{connectId}}
